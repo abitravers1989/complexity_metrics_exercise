@@ -5,8 +5,12 @@ class Story
     puts "Do you like this horse?"
   end
 
+  def gets_yes?
+    gets.downcase.start_with? "y"
+  end
+
   def what_to_do
-    if gets.downcase.start_with? "y"
+    if gets_yes?
       bla_method
     else
       puts "It got sad"
@@ -16,7 +20,7 @@ class Story
 
    def bla_method
      puts "Do you like it a lot?"
-    if gets.downcase.start_with? "y"
+    if gets_yes?
       puts "It lived happily ever after"
     else
       puts "It lived an okay life"
