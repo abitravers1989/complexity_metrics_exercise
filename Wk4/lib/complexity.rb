@@ -11,6 +11,7 @@ class Story
 
   def what_to_do
     if gets_yes?
+      more_tell
       bla_method
     else
       puts "It got sad"
@@ -18,8 +19,11 @@ class Story
     end
   end
 
-   def bla_method
+   def more_tell
      puts "Do you like it a lot?"
+   end
+
+  def bla_method
     if gets_yes?
       puts "It lived happily ever after"
     else
